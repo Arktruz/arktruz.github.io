@@ -1,1 +1,1 @@
-# Arktruz.github.io
+# arktruz.github.io
