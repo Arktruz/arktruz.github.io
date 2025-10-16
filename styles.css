@@ -1,1 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background: linear-gradient(0deg, hsl(15, 100%, 50%) 0%, hsl(30, 90%, 50%) 100%);
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    animation-name: wakeUp;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+}   
+
+
+@keyframes wakeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+header{
+    text-align: center;
+    color: white;
+}
+.maincontent {
+    width: 800px;
+    background-color: white;
+    border-top: 8px solid #9900ff; /* ← cor da faixa */
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width:840px;
+    margin: 0 auto;
+    justify-content:space-between;
+    padding: 20px;
+}
+.item {
+    width: 270px;
+    height: 270px;
+    background-color: white;
+    border-radius: 8px;
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    transition: 0.5s ease;
+    animation: itemappear 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+@keyframes itemappear{
+    0%{
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100%{
+        opacity: 100;
+        transform: scale(1);
+    }
+}
+
+.item-img{
+    margin: 10px;
+    margin-bottom: 0;
+    width: 250px;
+    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.item-text{
+    font-size: 20px;
+}
+
+.item:hover {
+    width: 270px;
+    height: 270px;
+    background-color: white;
+    border-radius: 8px;
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 0 20px -15px black;
+    transform: scale(1.01);
+    transition: 0.5s ease;
+    animation: itemappear 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
 
